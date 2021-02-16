@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Iterator;
+
 public class Task_Bank_ArrayList {
     public static void main(String[] args) {
         Bank bank = new Bank();
@@ -11,6 +13,14 @@ public class Task_Bank_ArrayList {
 //        System.out.println(bank.getAccount("12345"));
 //        System.out.println(bank.getAccounts());
         bank.findAccounts("이동근");
+        System.out.println(bank.getAccount("12345").getBalance());
+        bank.getAccount("12345").deposit(1000);
+
+//        Iterator<Transaction> i =  bank.getAccount("12345").getTransactions().iterator();
+//        while(i.hasNext()){
+//            System.out.println(i.next());
+//        }
+
 
 
     }

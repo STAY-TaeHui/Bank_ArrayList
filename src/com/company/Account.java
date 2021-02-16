@@ -1,36 +1,43 @@
 package com.company;
 
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+import java.util.logging.SimpleFormatter;
 
 public class Account {
     private String accountNo;
     private String name;
     private long balance;
-    private List<Transaction> transaction;
+    private List<Transaction> transactions;
+
+
     public Account(String accountNo, String name){
         this.accountNo = accountNo;
         this.name = name;
     }
-    
+    //입금
     public void deposit(long amount){
-        
+        balance +=amount;
+        transactions.add(new Transaction("","","입금",amount,balance));
     }
-    
+    //출금
     public void withdraw(long amount) {
 
+        balance -=amount;
+        transactions.add(new Transaction("","","출금",amount,balance));
     }
-    public long getBalnce() {
-        return 0;
-    }
-    public ArrayList<Transaction> getTransactions() {
-        return null;
+    //잔고확인
+    public long getBalance() {
+        return this.balance;
     }
 
-    public void setAccountNo(String accountNo) {
-        this.accountNo = accountNo;
+    //거래내역 확인
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 
     @Override
@@ -39,7 +46,7 @@ public class Account {
                 "accountNo='" + accountNo + '\'' +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
-                ", transaction=" + transaction +
+                ", transaction=" + transactions +
                 "}\n";
     }
 
@@ -51,24 +58,17 @@ public class Account {
         this.name = name;
     }
 
-    public long getBalance() {
-        return balance;
-    }
-
     public void setBalance(long balance) {
         this.balance = balance;
     }
 
-    public List<Transaction> getTransaction() {
-        return transaction;
-    }
-
-    public void setTransaction(List<Transaction> transaction) {
-        this.transaction = transaction;
-    }
 
     public String getAccountNo() {
         return accountNo;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
     }
 
 
