@@ -12,5 +12,6 @@ public class Task_Bank_ArrayList {
 //        System.out.println(bank.getAccounts());
         bank.findAccounts("이동근");
 
+
     }
 }
