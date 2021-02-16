@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Account {
     private String accountNo;
     private String name;
@@ -31,8 +29,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account [accountNo=" + accountNo + ", name=" + name + ", balance=" + balance + ", transaction="
-                + Arrays.toString(transaction) + "]";
+        return "[계좌번호 :" + accountNo + ", 소유자 명 : " + name + ", 잔액 : " + balance + "]";
     }
 
 }

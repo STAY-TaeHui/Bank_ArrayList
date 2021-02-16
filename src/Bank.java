@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class Bank {
-    private ArrayList<Account> accounts;
+    private List<Account> accounts;
     public Bank(){
         accounts = new ArrayList<Account>();
     }
@@ -22,19 +23,18 @@ public class Bank {
         }
         return num;
     }
-    
+
     // 소유자명으로 계좌 찾기
-    public Account[] findAccounts(String name) {
+    public List findAccounts(String name) {
         return null;
     }
     // 계좌목록 확인
-    public Account getAccounts() {
-        Account[] num = null;
-        Iterator<Account> Ilist = accounts.iterator();
-        while(Ilist.hasNext()) {
-            num = Ilist.next();
+    public List getAccounts() {
+        List<Account> Llist = new ArrayList<Account>();
+        for(int i = 0; i < accounts.size(); i++) {
+            Llist.add(accounts.get(i));
         }
-        return num;
+        return Llist;   
     }
     // 총계좌수를 반환
     public int getTotalAccount() {
