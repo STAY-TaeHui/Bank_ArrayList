@@ -15,10 +15,16 @@ public class Task_Bank_ArrayList {
         bank.findAccounts("이동근");
         System.out.println(bank.getAccount("12345").getBalance());
 
+        bank.getAccount("12345").deposit(1000);
         bank.getAccount("12345").deposit(2000);
+        bank.getAccount("12345").deposit(3000);
         System.out.println(bank.getAccount("12345").getBalance());
         bank.getAccount("12345").withdraw(1000);
         System.out.println(bank.getAccount("12345").getBalance());
+        bank.getAccount("12345").withdraw(2000);
+        bank.getAccount("12345").withdraw(3000);
+
+
 
 
 

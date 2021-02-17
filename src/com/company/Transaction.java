@@ -11,18 +11,15 @@ public class Transaction {
     private String kind;
     private long amount;
     private long balance;
+
     private Calendar cal;
     private Date date;
-
     private SimpleDateFormat ymd;
     private SimpleDateFormat hms;
 
 
     public Transaction(String kind, long amount, long balance) {
-//        cal = Calendar.getInstance();
-//        this.transactionDate = cal.get(Calendar.YEAR)+"년 "+(cal.get(Calendar.MONTH)+1)+"월 "+cal.get(Calendar.DATE)+"일";
-//        this.transactionTime = cal.get(Calendar.HOUR)+":"+cal.get(Calendar.MINUTE)+":"+cal.get(Calendar.SECOND);
-        ymd = new SimpleDateFormat("yyyy/ MM/dd");
+        ymd = new SimpleDateFormat("yyyy/MM/dd");
         hms = new SimpleDateFormat("a HH:mm:ss");
         date = new Date();
 

@@ -16,18 +16,17 @@ public class Account {
 
 
     public Account(String accountNo, String name){
+        transactions = new ArrayList<>();
         this.accountNo = accountNo;
         this.name = name;
     }
     //입금
     public void deposit(long amount){
-        transactions = new ArrayList<>();
         balance +=amount;
         transactions.add(new Transaction("입금",amount,balance));
     }
     //출금
     public void withdraw(long amount) {
-        transactions = new ArrayList<>();
         balance -=amount;
         transactions.add(new Transaction("출금",amount,balance));
     }
@@ -38,6 +37,7 @@ public class Account {
 
     //거래내역 확인
     public List<Transaction> getTransactions() {
+        System.out.println(transactions.size());
         return transactions;
     }
 
