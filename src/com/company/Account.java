@@ -24,20 +24,26 @@ public class Account {
     public void deposit(long amount){
         balance +=amount;
         transactions.add(new Transaction("입금",amount,balance));
+        System.out.printf("%d원을 입금 하였습니다.\n",amount);
+        System.out.printf("현재 잔액 : %d\n", balance);
     }
     //출금
     public void withdraw(long amount) {
         balance -=amount;
         transactions.add(new Transaction("출금",amount,balance));
+        System.out.printf("%d원을 출금 하였습니다.\n",amount);
+        System.out.printf("현재 잔액 : %d\n", balance);
     }
     //잔고확인
     public long getBalance() {
+        System.out.println("== 현재 잔액 조회 ==");       
+        System.out.print("현재 잔액 : ");
         return this.balance;
     }
 
     //거래내역 확인
     public List<Transaction> getTransactions() {
-        System.out.println(transactions.size());
+        //System.out.println(transactions.size());
         return transactions;
     }
 

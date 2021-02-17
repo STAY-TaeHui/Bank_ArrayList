@@ -14,17 +14,13 @@ public class Transaction {
 
     private Calendar cal;
     private Date date;
-    private SimpleDateFormat ymd;
-    private SimpleDateFormat hms;
 
 
     public Transaction(String kind, long amount, long balance) {
-        ymd = new SimpleDateFormat("yyyy/MM/dd");
-        hms = new SimpleDateFormat("a HH:mm:ss");
-        date = new Date();
+        cal = Calendar.getInstance();
 
-        this.transactionDate=ymd.format(date);
-        this.transactionTime = hms.format(date);
+        this.transactionDate= (new SimpleDateFormat("yy년MM월dd일 HH시mm분ss초")).format(cal.getTime());
+
         this.kind = kind;
         this.amount = amount;
         this.balance = balance;
@@ -32,12 +28,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "transactionDate='" + transactionDate + '\'' +
-                ", transactionTime='" + transactionTime + '\'' +
-                ", kind='" + kind + '\'' +
-                ", amount=" + amount +
-                ", balance=" + balance +
-                '}';
+        return  "[거래금액 : " + amount + "원, 잔액 : " + balance + "원 /" + transactionDate + "]";
     }
 }

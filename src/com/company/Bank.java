@@ -14,6 +14,7 @@ public class Bank {
     public void addAccount(String accountNo, String name) {
         accounts.add(new Account(accountNo,name));
     }
+    
     // 계좌번호로 계좌 찾기
     public Account getAccount(String accountNo) {  
         Account num = null;
@@ -32,6 +33,7 @@ public class Bank {
         List<Account> atmp = new ArrayList<>();
         Account now;
         Iterator<Account> li = accounts.iterator();
+        System.out.println("= 해당 소유자명의 계좌 목록 =");
         while(li.hasNext()){
             now = li.next();
             if(now.getName().equals(name))
@@ -52,6 +54,7 @@ public class Bank {
             System.out.println(lt.next());
         }
     }
+    
     // 총계좌수를 반환
     public int getTotalAccount() {
         System.out.print("총 계좌 수 : ");
