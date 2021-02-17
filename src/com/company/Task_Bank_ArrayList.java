@@ -22,10 +22,10 @@ public class Task_Bank_ArrayList {
 
 
 
-//        Iterator<Transaction> i =  bank.getAccount("12345").getTransactions().iterator();
-//        while(i.hasNext()){
-//            System.out.println(i.next());
-//        }
+        Iterator<Transaction> i =  bank.getAccount("12345").getTransactions().iterator();
+        while(i.hasNext()){
+            System.out.println(i.next());
+        }
 
 
 

@@ -43,12 +43,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
-                "accountNo='" + accountNo + '\'' +
-                ", name='" + name + '\'' +
-                ", balance=" + balance +
-                ", transaction=" + transactions +
-                "}\n";
+        return "[계좌번호 :" + accountNo + ", 소유자 명 : " + name + ", 잔액 : " + balance + "]";
     }
 
     public String getName() {
