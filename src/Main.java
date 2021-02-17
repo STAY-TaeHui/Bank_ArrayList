@@ -6,9 +6,11 @@ public class Main {
         bank.addAccount("12345", "이동근");
         bank.addAccount("45678", "김동동");
         bank.addAccount("8456465", "하이");
-        System.out.println(bank.getAccount("45678"));
-        System.out.println(bank.getAccount("12345"));
-        System.out.println(bank.getAccounts());
+        System.out.println(bank.getTotalAccount());
         
+        
+//        System.out.println(bank.getAccount("45678"));
+//        System.out.println(bank.getAccount("12345"));
+        bank.getAccounts();
     }
 }

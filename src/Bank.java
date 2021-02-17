@@ -28,16 +28,22 @@ public class Bank {
     public List findAccounts(String name) {
         return null;
     }
+    
     // 계좌목록 확인
-    public List getAccounts() {
+    public void getAccounts() {
         List<Account> Llist = new ArrayList<Account>();
         for(int i = 0; i < accounts.size(); i++) {
             Llist.add(accounts.get(i));
         }
-        return Llist;   
+        Iterator<Account> lt = Llist.iterator();
+        System.out.println("= 전체 계좌 목록 =");
+        while(lt.hasNext()) {
+            System.out.println(lt.next());
+        }
     }
     // 총계좌수를 반환
     public int getTotalAccount() {
+        System.out.print("총 계좌 수 : ");
         return accounts.size();
     }
 }
