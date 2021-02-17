@@ -21,14 +21,15 @@ public class Account {
     }
     //입금
     public void deposit(long amount){
+        transactions = new ArrayList<>();
         balance +=amount;
-        transactions.add(new Transaction("","","입금",amount,balance));
+        transactions.add(new Transaction("입금",amount,balance));
     }
     //출금
     public void withdraw(long amount) {
-
+        transactions = new ArrayList<>();
         balance -=amount;
-        transactions.add(new Transaction("","","출금",amount,balance));
+        transactions.add(new Transaction("출금",amount,balance));
     }
     //잔고확인
     public long getBalance() {
