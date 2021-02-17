@@ -16,7 +16,7 @@ public class Transaction {
 
     public Transaction(String kind, long amount, long balance) {
         cal = Calendar.getInstance();
-        this.transactionDate = cal.get(Calendar.YEAR)+"년 "+cal.get(Calendar.MONTH)+"월 "+cal.get(Calendar.DATE)+"일";
+        this.transactionDate = cal.get(Calendar.YEAR)+"년 "+(cal.get(Calendar.MONTH)+1)+"월 "+cal.get(Calendar.DATE)+"일";
         this.transactionTime = cal.get(Calendar.HOUR)+":"+cal.get(Calendar.MINUTE)+":"+cal.get(Calendar.SECOND);
         this.kind = kind;
         this.amount = amount;
